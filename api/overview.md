@@ -11,9 +11,9 @@ All valid GET requests return a json object as the response. GET requests return
 
 A collection is returned as an array of objects:
 
-````json
+```
 {
-    “data”: [
+    "data": [
         ...
     ],
     ...
@@ -22,9 +22,9 @@ A collection is returned as an array of objects:
 
 An item is returned as an object:
 
-```json
+```
 {
-    “data”: {
+    "data": {
         ...
     },
     ...

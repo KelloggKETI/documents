@@ -70,11 +70,11 @@ Data element will be a Collection with items of the following form:
 
 ```json
 {
-    "id": unique identifier
-    "first_name": "Gad”
-    "middle_name": ""
-    "last_name": "Allon",
-    "homepage": ""
+    "id": 1,
+    "first_name": "John",
+    "middle_name": "",
+    "last_name": "Doe",
+    "homepage": "",
     "img_url": ""
 }
 ```
@@ -91,11 +91,11 @@ Data element will be an Item of the form:
 
 ```json
 {
-    "id": unique identifier
-    "first_name": "Gad”
-    "middle_name": ""
-    "last_name": "Allon",
-    "homepage": ""
+    "id": 1,
+    "first_name": "John",
+    "middle_name": "",
+    "last_name": "Doe",
+    "homepage": "",
     "img_url": ""
 }
 ```
