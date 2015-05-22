@@ -1,2 +1,2 @@
-# documents
+# Documents
 Repo for KETI documentation
