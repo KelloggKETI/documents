@@ -14,20 +14,37 @@ Lists terms with academic calendar information. By default returns all four quar
 
 ### Response
 
-<insert json>
+```json
+{
+    "id": 1,
+    "name": "Fall 2014",
+    "start_date": "2014-09-01",
+    "end_date": "2014-12-31"
+}
+```
 
 ## Get a single Term
 
-Get a term from its id. Contains the special endpoints (current, prev, next) for frequently accessed terms.
+Get a term from its id.
 
     GET /terms/:term_id
+
+Also includes special endpoints for frequently accessed terms.
+
     GET /terms/current
     GET /terms/prev
     GET /terms/next
 
 ### Response
 
-<insert json>
+```json
+{
+    "id": 1,
+    "name": "Fall 2014",
+    "start_date": "2014-09-01",
+    "end_date": "2014-12-31"
+}
+```
 
 ## List Courses
 
@@ -41,7 +58,18 @@ List all courses offered in a specific term.
 
 ### Response
 
-<insert json>
+Note that course number and suffix have no numeric meaning, and may be characters, so are returned as strings.
+
+```json
+{
+    "id": 1,
+    "department": "MORS",
+    "number": "430",
+    "suffix": "0",
+    "code": "MORS-430-0",
+    "title": "Management and Organizations"
+}
+```
 
 ## Get a single Course
 
@@ -51,12 +79,20 @@ Get a course from its id.
 
 ### Response
 
-Data element will be an item of the form
-<insert json>
+```json
+{
+    "id": 1,
+    "department": "MORS",
+    "number": "430",
+    "suffix": "0",
+    "code": "MORS-430-0",
+    "title": "Management and Organizations"
+}
+```
 
 ## List Instructors
 
-List all active instructors
+List all active instructors.
 
     GET /instructors
 
@@ -65,8 +101,6 @@ List all instructors who have taught or a scheduled to teach a specific course.
     GET /courses/:course_id/instructors
 
 ### Response
-
-Data element will be a Collection with items of the following form:
 
 ```json
 {
@@ -86,8 +120,6 @@ Get an instructor from their id.
     GET instructors/:instructor_id
 
 ### Response
-
-Data element will be an Item of the form:
 
 ```json
 {
@@ -109,7 +141,25 @@ Data element will be an Item of the form:
 
 ### Response
 
-<insert json>
+> @todo The course_id could be keyed by either id, code or both.
+
+A section may have multiple instructors. For ease of use, instructors ids will be contained in an array of integers.
+
+```json
+{
+    "id": 1,
+    "term_id": 1,
+    "course_id": 1,
+    "course_code": "MORS-430-0",
+    "section_number": 61,
+    "instructors": [
+        591,
+        366
+    ],
+    "day": "MR",
+    "time": "8:30-10:30"
+}
+```
 
 ### Get a single Section
 
@@ -119,5 +169,20 @@ Get a section from its id.
 
 ### Response
 
-<insert json>
+See note above regarding instructor id.
 
+```json
+{
+    "id": 1,
+    "term_id": 1,
+    "course_id": 1,
+    "course_code": "MORS-430-0",
+    "section_number": 61,
+    "instructors": [
+        591,
+        366
+    ],
+    "day": "MR",
+    "time": "8:30-10:30"
+}
+```
