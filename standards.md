@@ -21,13 +21,11 @@ Instructions for using OpenShift can be found at the [OpenShift Developer's Webs
 
 ## 2. Data Access and Authentication
 
-All Kellogg data MUST be sourced from a KIS-approved service, unless authorization has been obtained from the Dean’s Office to use another source. Instructions for using the API can be found at <insert link>.
+All Kellogg data MUST be sourced from a KIS-approved service, unless authorization has been obtained from the Dean’s Office to use another source. Instructions for using the API can be found at XXX.
 
 > @todo Include link to instructions.
 
-Applications MAY collect any other data they require either directly from users or using social authentication.
-
-Applications MUST NOT store any data accessed through APIs in persistent storage. This ensures applications accurately reflect the state of Kellogg’s master data. Additionally, applications SHOULD NOT cache any data accessed through APIs for longer than X.
+Applications MUST NOT store any data accessed through APIs in persistent storage. This ensures applications accurately reflect the state of Kellogg’s master data. Additionally, applications SHOULD NOT cache any data accessed through APIs for longer than XXX.
 
 > @todo How long should the cache recommendation be?
 
@@ -37,10 +35,12 @@ Applications SHOULD use NetID based authentication.
 
 > @todo Include additional information on authentication options.
 
+Applications MAY collect any other data they require either directly from users or using social authentication.
+
 
 ## 3. Platforms, Languages and Frameworks
 
-Web apps or server backends MAY use any combination on languages required to achieve the desired functionality. Developers SHOULD be parsimonious with language and framework choice to reduce maintenance overhead. This includes:
+Web apps or server backends MAY use any combination of languages required to achieve the desired functionality. Developers SHOULD be parsimonious with language and framework choice to reduce maintenance overhead. This includes:
 - Limiting the number of languages used
 - Choosing common, low learning curve languages
 - Only using well established frameworks
@@ -60,7 +60,7 @@ Applications MUST be backup up on a weekly basis to a 3rd party server.
 
 > @todo Check if SESP runs backup routines that are sufficient for this requirement.
 
-Source code MUST be made available to KIS and KETI executive. This can be done through a public Github repository, or a private repository 
+Source code MUST be made available to KIS and KETI executive. This can be done through a public Github repository, or by granting relevant program administrators access to a private repository.
 
 
 ## 5. Code Guidelines
@@ -88,6 +88,6 @@ Applications MUST include complete deployment instructions.
 
 Applications MUST include a functional specification document. Applications MUST include a suite of functional tests. Applications MUST include a mapping of functional specifications to functional tests. This mapping MAY be included as comments in the functional tests or as a separate document.
 
-Applications SHOULD include unit tests with reasonable code and feature coverage (see [this SO post](http://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) for reaonable).
+Applications SHOULD include unit tests with reasonable code and feature coverage (see [this SO post](http://stackoverflow.com/questions/90002/what-is-a-reasonable-code-coverage-for-unit-tests-and-why) for a definition of reaonable).
 
 > @todo Decide if we should be more specific about unit testing code coverage.
