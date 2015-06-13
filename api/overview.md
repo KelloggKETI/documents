@@ -35,7 +35,7 @@ Other members can be used for metadata (e.g. links) and are described in the app
 
 ## Authentication
 
-TBD
+TBD - Key-based authentication managed by KIS. Likely to be a request to KIS-help to generate a new key.
 
 ## Pagination
 

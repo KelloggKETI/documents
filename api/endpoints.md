@@ -18,6 +18,7 @@ Lists terms with academic calendar information. By default returns all four quar
 {
     "id": 1,
     "name": "Fall 2014",
+    "ses_id": 1234,
     "start_date": "2014-09-01",
     "end_date": "2014-12-31"
 }
@@ -41,6 +42,7 @@ Also includes special endpoints for frequently accessed terms.
 {
     "id": 1,
     "name": "Fall 2014",
+    "ses_id": 1234,
     "start_date": "2014-09-01",
     "end_date": "2014-12-31"
 }
@@ -67,7 +69,7 @@ Note that course number and suffix have no numeric meaning, and may be character
     "number": "430",
     "suffix": "0",
     "code": "MORS-430-0",
-    "title": "Management and Organizations"
+    "title": "Leadership in Organizations"
 }
 ```
 
@@ -86,7 +88,7 @@ Get a course from its id.
     "number": "430",
     "suffix": "0",
     "code": "MORS-430-0",
-    "title": "Management and Organizations"
+    "title": "Leadership in Organizations"
 }
 ```
 
@@ -136,12 +138,14 @@ Get an instructor from their id.
 
     GET /sections
     GET /terms/:term_id/sections
-    GET /courses/course_id/sections
+    GET /courses/:course_id/sections
     GET /instructors/:instructor_id/sections
 
 ### Response
 
 > @todo The course_id could be keyed by either id, code or both.
+> @todo What about course by term
+> @todo What extra data? Campus, First class req, etc?
 
 A section may have multiple instructors. For ease of use, instructors ids will be contained in an array of integers.
 
